@@ -31,18 +31,24 @@ export function LayoutUserBiblioteca() {
 
     return (
         <div className="biblioteca-container">
-            <h2 className="titulo-biblioteca">Mi Biblioteca</h2>
-            <div className="inputContainer">
-                <input type="text" placeholder="Buscar juego..." value={busqueda} onChange={(e) => setBusqueda(e.target.value)} className="buscador-input"/>
+            <div className="box1">
+                <h2 className="titulo-biblioteca">Mi Biblioteca</h2>
+                <div className="inputContainer">
+                    <input type="text" placeholder="Buscar juego..." value={busqueda} onChange={(e) => setBusqueda(e.target.value)} className="buscador-input"/>
+                </div>
+                <div className="juegos-grid">
+                {juegosFiltrados.length === 0 ? (
+                    <p>No se encontraron juegos.</p>
+                ):
+                (
+                    juegosFiltrados.map((juego) => (
+                        <JuegosCarts key={juego.id} juego={juego} />
+                    ))
+                )}
+                </div>
             </div>
-            <div className="juegos-grid">
-            {juegosFiltrados.length === 0 ? (
-                <p>No se encontraron juegos.</p>
-            ) : (
-                juegosFiltrados.map((juego) => (
-                    <JuegosCarts key={juego.id} juego={juego} />
-                ))
-            )}
+            <div className="box2">
+                
             </div>
         </div>
     );

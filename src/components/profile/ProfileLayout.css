@@ -23,7 +23,15 @@
     font-family: Arial, sans-serif;
 }
 
-.contenedorProfile img {
+.marcobox1{
+    width: 270px;
+    height: 246px;
+    position: absolute;
+    bottom: 10px;
+    left: 9px;
+}
+
+.imgProfile {
     height: 200px;
     width: auto;
     border-radius: 10px;
