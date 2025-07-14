@@ -50,6 +50,7 @@ export function Register() {
             navigate("/login");
             toast.success("Creacion de cuenta éxitosa");
         } catch (error) {
+            console.log(error)
             setCustomError("Ocurrió un error al crear tu cuenta.");
         }
     };
