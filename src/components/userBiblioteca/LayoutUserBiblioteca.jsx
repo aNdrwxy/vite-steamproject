@@ -8,6 +8,8 @@ export function LayoutUserBiblioteca() {
     const user_id = localStorage.getItem('user_id');
     const [busqueda, setBusqueda] = useState("");
     const [juegosFiltrados, setJuegosFiltrados] = useState(juegos);
+    const [juegoSeleccionado, setJuegoSeleccionado] = useState(null);
+
 
     useEffect(() => {
         async function fetchBiblioteca() {
@@ -42,13 +44,28 @@ export function LayoutUserBiblioteca() {
                 ):
                 (
                     juegosFiltrados.map((juego) => (
-                        <JuegosCarts key={juego.id} juego={juego} />
+                        <JuegosCarts key={juego.id} juego={juego} onClick={(j) => setJuegoSeleccionado(j)} />
                     ))
                 )}
                 </div>
             </div>
             <div className="box2">
+            {juegoSeleccionado ? (
                 
+                <div className="detalle-juego">
+                    <div className="imagenJuego-detalle">
+                        <img src={juegoSeleccionado.imagen} alt="imagen juego" />
+                    </div>
+                    <div className="infoJuego-detalle">
+                        <h3>{juegoSeleccionado.nombre}</h3>
+                        <p><strong>Descripción: </strong><br />{juegoSeleccionado.descripcion}</p>
+                        <p><strong>Fecha de Lanzamiento: </strong><br />{juegoSeleccionado.fecha_lanzamiento}</p>
+                        <p><strong>Desarrollador: </strong><br />{juegoSeleccionado.desarrollador}</p>
+                    </div>
+                </div>
+            ) : (
+                <p className="mensaje-inicial">Selecciona un juego para ver los detalles</p>
+            )}
             </div>
         </div>
     );
