@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getGamerForId } from '../../api/biblioteca.api'; // ajusta si la ruta es diferente
-import { JuegosCarts } from './juegosCarts';
+import { JuegosCarts } from './JuegosCarts';
 import './layoutUserBiblioteca.css';
 
 export function LayoutUserBiblioteca() {
