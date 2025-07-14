@@ -29,7 +29,8 @@ export function ProfileLayout({profile}){
         <div>
             <div className="backgroundProfile" style={{ backgroundImage: `url(${profile.background})` }}></div>
             <div className="contenedorProfile">
-                <img src={profile.avatar} />
+                <img className="imgProfile" src={profile.avatar} />
+                <img className="marcobox1" src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/322330/46461aaea39b18a4a3da2e6d3cf253006f2d6193.png"/>
                 <div className="profileInfo">
                     <h5>{profile.nombre_perfil} <span>({profile.edad})</span></h5>
                     <span>{profile.sexo}</span>
@@ -39,6 +40,7 @@ export function ProfileLayout({profile}){
                     )}
                 </div>
             </div>
+            
             {modalOpen && (
                 <div className="modalOverlay" id="modalDescripcion">
                     <div className="modalContent">

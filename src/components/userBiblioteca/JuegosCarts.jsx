@@ -8,10 +8,7 @@ export function JuegosCarts({juego}){
                     <img className="juego-imagen"  src={juego.imagen} alt="imagen" />
                     <div className="overlay">
                         <div className="juego-info">
-                            <h3>{juego.nombre}</h3>
-                            <p>{juego.descripcion}</p>
-                            <p><strong>Desarrollador: </strong>{juego.desarrollador}</p>
-                            <p><strong>Fecha de Lanzamiento: </strong>{juego.fecha_lanzamiento}</p>
+                            <h3 className='textnamegame'>{juego.nombre}</h3>
                         </div>
                     </div>
                 </div>
