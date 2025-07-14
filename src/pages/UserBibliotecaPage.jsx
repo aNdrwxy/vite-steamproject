@@ -1,4 +1,4 @@
-import { LayoutUserBiblioteca } from '../components/userBiblioteca/layoutUserBiblioteca';
+import { LayoutUserBiblioteca } from '../components/userBiblioteca/LayoutUserBiblioteca';
 
 export function UserBibliotecaPage(){
     return <LayoutUserBiblioteca />;
