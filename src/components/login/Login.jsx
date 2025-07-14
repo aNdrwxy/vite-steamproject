@@ -22,7 +22,7 @@ export function Login() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}accounts/api/token/`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URLT}`, {
             method: "POST",
             headers: {
             "Content-Type": "application/json",
