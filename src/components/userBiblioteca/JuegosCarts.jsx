@@ -1,4 +1,4 @@
-import './juegosCarts.css';
+import './JuegosCarts.css';
 
 export function JuegosCarts({juego}){
     return (
