@@ -15,7 +15,7 @@ export function Header() {
         const user_id = localStorage.getItem("user_id");
 
         if (token && user_id) {
-            fetch(`http://localhost:8000/accounts/api/v1/profile/${user_id}/`)
+            fetch(`${import.meta.env.VITE_API_URL}profile/${user_id}/`)
                 .then(res => res.json())
                 .then(data => setPerfil(data))
                 .catch(() => setPerfil(null));
