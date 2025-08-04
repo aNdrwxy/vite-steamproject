@@ -10,6 +10,7 @@ import { RegisterPage } from "./pages/RegisterPage";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import { UserBibliotecaPage } from "./pages/UserBibliotecaPage";
+import { TiendaPage } from "./pages/TiendaPage";
 
 
 function App(params) {
@@ -20,6 +21,9 @@ function App(params) {
     <Routes>
     <Route path="/" element={<Navigate to="/login" />} />
     <Route path="/login" element={<LoginPage />} />
+    <Route path="/tienda" element={<TiendaPage />} />
+    <Route path="/shop" element={<TiendaPage />} />
+    <Route path="/store" element={<TiendaPage />} />
     <Route path="/register" element={<RegisterPage />} />
     <Route path="/profiles" element={<ProtectedRoute><ProfilesListPage /></ProtectedRoute>} />
     <Route path="/profile" element={<Navigate to="/login" />} />
