@@ -78,7 +78,7 @@ export function Login() {
                     </div>
                     <div className="box_QR">
                         <strong>o bien con un codigo QR</strong>
-                        <img className="login_QR" src="../../public/frame.png" alt=""/>
+                        <img className="login_QR" src="/frame.png" alt=""/>
                         <strong>Usa la aplicación Steam Mobile para iniciar sesión con un código QR</strong>
                     </div>
                 </div>
